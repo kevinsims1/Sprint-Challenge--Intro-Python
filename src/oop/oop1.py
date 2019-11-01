@@ -23,21 +23,25 @@ class Vehicle():
     pass
 
 class FlightVehicle(Vehicle):
-    # Intermediate base clasS?
+    # Child
     pass
 
 class Starship(FlightVehicle):
+    #GrandChild
     pass
 
 class Airplane(FlightVehicle):
+    #grand child
     pass
 
 class GroundVehicle(Vehicle):
-    # intermediate base class?
+    #child
     pass
 
 class Car(GroundVehicle):
+    #grandchild
     pass
 
 class Motorcycle(GroundVehicle):
+    #grand child
     pass
