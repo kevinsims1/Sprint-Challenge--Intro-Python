@@ -83,5 +83,14 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
   # TODO Ensure that the lat and lon valuse are all floats
   # Go through each city and check to see if it falls within 
   # the specified coordinates.
+  if lat1 and lon1 and lat2 and lon2 == float:
+    with open('cities.csv', 'r') as csvfile:
+      rowreader = csv.reader(csvfile)
+      next(rowreader)
+      for row in rowreader:
+        city= City(row[0], float(row[3]), float(row[4]))
+        if city.lat <= lat1 and city.lon >= lon2 or city.lat <= lat2 and city.lon >= lon1:
+          within.append(city)
+
 
   return within
